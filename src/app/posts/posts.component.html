@@ -1,0 +1,22 @@
+<div *ngFor="let post of posts">
+    <div class="card" style="width: 18rem">
+      <img [src]="post.imageUrl" class="card-img-top" alt="логотип партнера" />
+      <div class="card-body">
+        <h5 class="card-title">Название статьи: {{ post.name }}</h5>
+        <div class="card-text">
+          <div>Дата написания: {{ post.year }}</div>
+          <div>Автор: {{ post.author }}</div>
+          <div>Содержание: {{ post.text }}</div>
+          <div>
+            <i>
+              Здесь могла быть ваша реклама
+            </i>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer" *ngIf="post.rating">
+        Рейтинг: {{ post.rating }}
+      </div>
+    </div>
+  </div>
+  
